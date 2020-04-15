@@ -22,4 +22,22 @@ public class MaximumAnalyserTest {
         Integer maximumNumber = maximumAnalyser.FindMaximumNumber(21 ,51, 101);
         Assert.assertEquals((Integer) 101 , maximumNumber);
     }
+    @Test
+    public void GivenThreeFloat_findMaximumAt_firstPosition_shuldReturnSameNumber() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        Float maximumNumber = maximumAnalyser.FindMaximumNumber(101.05f,21.50f, 51.10f);
+        Assert.assertEquals((Float) 101.05f , maximumNumber);
+    }
+    @Test
+    public void GivenThreeFloat_findMaximumAt_secondPosition_shuldReturnSameNumber() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        Float maximumNumber = maximumAnalyser.FindMaximumNumber(21.50f ,101.05f, 51.10f);
+        Assert.assertEquals((Float) 101.05f , maximumNumber);
+    }
+    @Test
+    public void GivenThreeFloat_findMaximumAt_thirdPosition_shuldReturnSameNumber() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        Float maximumNumber = maximumAnalyser.FindMaximumNumber(51.10f ,21.50f, 101.05f);
+        Assert.assertEquals((Float) 101.05f , maximumNumber);
+    }
 }
