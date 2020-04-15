@@ -40,4 +40,22 @@ public class MaximumAnalyserTest {
         Float maximumNumber = maximumAnalyser.FindMaximumNumber(51.10f ,21.50f, 101.05f);
         Assert.assertEquals((Float) 101.05f , maximumNumber);
     }
+    @Test
+    public void GivenThreeStrings_findMaximumAt_firstPosition_shuldReturnSameString() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        String maximumString = maximumAnalyser.FindMaximumString("Silver" , "Gold" , "Iron");
+        Assert.assertEquals((String) "Silver" , maximumString);
+    }
+    @Test
+    public void GivenThreeStrings_findMaximumAt_secondPosition_shuldReturnSameString() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        String maximumString = maximumAnalyser.FindMaximumString("Gold","Silver" ,"Iron");
+        Assert.assertEquals((String) "Silver" , maximumString);
+    }
+    @Test
+    public void GivenThreeStrings_findMaximumAt_thirdPosition_shuldReturnSameString() {
+        MaximumAnalyser maximumAnalyser = new MaximumAnalyser();
+        String maximumString = maximumAnalyser.FindMaximumString("Iron" ,"Gold", "Silver");
+        Assert.assertEquals((String) "Silver" , maximumString);
+    }
 }

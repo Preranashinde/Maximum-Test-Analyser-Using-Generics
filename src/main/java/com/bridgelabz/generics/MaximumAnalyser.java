@@ -17,4 +17,12 @@ public class MaximumAnalyser {
         else
             return third;
     }
+    public String FindMaximumString(String firstString, String secondString, String thirdString) {
+        if (firstString.compareTo(secondString) > 0 && firstString.compareTo(thirdString) > 0)
+            return firstString;
+        else if (secondString.compareTo(firstString) > 0 && secondString.compareTo(thirdString) > 0)
+            return secondString;
+        else
+            return thirdString;
+    }
 }
