@@ -2,24 +2,23 @@ package com.bridgelabz.generics;
 
 import java.util.Arrays;
 
-public class MaximumAnalyser<K extends Comparable<K>>  {
-    private K first;
-    private K second;
-    private K third;
+public class MaximumAnalyser<K extends Comparable>  {
     K[] arrayElements;
 
     //Default Constructor
     public MaximumAnalyser() {
     }
     //Parameterized Constructor
-        public  MaximumAnalyser(K[] array) {
-            this.arrayElements=array;
+        public  MaximumAnalyser(K[] arrayElements) {
+            this.arrayElements=arrayElements;
     }
     public K findMaximumNumber(K...arrayElements)    {
         Arrays.sort(arrayElements);
+        K maximumResult=arrayElements[arrayElements.length-1];
+        printMax(maximumResult);
         return arrayElements[arrayElements.length-1];
     }
-    public <K extends Comparable<K>> K findMaximum(){
-        return (K) findMaximumNumber(arrayElements);
+    private static <K> void printMax(K maximumResult) {
+        System.out.println("Largest Among all is..."+maximumResult);
     }
 }
